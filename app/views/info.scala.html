@@ -1,0 +1,12 @@
+@(jogo: Jogo)
+ 
+@main("Jogo") {
+    <h1>@jogo.nome</h1>
+    <div>@jogo.genero</div>
+    <div>@jogo.estudio</div>
+    <div>@jogo.qualidade</div>
+    <div>@jogo.loja</div>
+}
+
+<a href=@(routes.JogoController.fordel)> Deletar Registro <a>
+<a href=@(routes.JogoController.formup)> Alterar Registro <a> 

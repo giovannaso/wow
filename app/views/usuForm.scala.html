@@ -1,0 +1,22 @@
+@(dForm: Form[(String,String,String)])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+
+@if(dForm.hasGlobalErrors) {
+  <ul>
+  @for(error <- dForm.globalErrors) {
+    <li>@error.format</li>
+  }
+  </ul>
+}
+
+@import helper._
+
+@helper.form(action = routes.UsuarioController.cadastro()) {
+  <!-- CROSS-SITE REQUEST FORGERY -->
+  @CSRF.formField                     
+  @helper.inputText(dForm("nome")) 
+  @helper.inputEmail(dForm("email")) 
+  @helper.inputPassword(dForm("senha")) 
+  <button type="submit">Send</button>
+}
+
+

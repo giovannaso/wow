@@ -1,0 +1,30 @@
+@(list:Seq[Filme])
+ 
+@main("Lista Filmes") {
+<body>
+<div id="fundo">
+    <h1>Filmezao Top</h1>
+    <table>
+        <tr>
+           <td>NOME</td>
+           <td>DURAÇÃO</td>
+           <td>GENERO</td>
+           <td>CLASSIFICAÇÃO</td>
+           <td>ESTUDIO</td>
+        </tr> 
+    @for(t <- list) {
+        <tr>
+           <td>@t.nome</td>
+           <td>@t.duracao</td>
+           <td>@t.genero</td>
+           <td>@t.clas</td>
+           <td>@t.estudio</td>
+        </tr> 
+    }
+    </table>
+    
+    <a href=@(routes.FilmeinController.formfilm)>Cadastrar</a>
+    
+</div>
+</body>
+}

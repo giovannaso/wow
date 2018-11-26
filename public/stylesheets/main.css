@@ -1,0 +1,42 @@
+h1{
+    color:purple;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 56px;
+    
+}
+
+h2{
+    color:red;
+    font-family: fantasy;
+}
+
+table {
+    border-collapse: collapse;
+    width: 30%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    color: black;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+.fundo {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background: url("../images/curtain.png") no-repeat bottom center scroll;
+  background-position: 30% 45%;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}

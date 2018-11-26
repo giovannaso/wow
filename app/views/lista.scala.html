@@ -1,0 +1,15 @@
+@(list:Seq[Disciplina])
+ 
+@main("Lista Disciplina") {
+    <h1>Disciplinas</h1>
+    <table>
+    @for(t <- list) {
+        <tr>
+           <td>@t.id</td>
+           <td>@t.nome</td>
+           <td>@t.codigo</td>
+           <td>@t.qtHoras</td>
+        </tr> 
+    }
+    </table>
+}
